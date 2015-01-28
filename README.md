@@ -267,11 +267,11 @@ public class CityConnect {
 				slotPosition);
 
 		return String.format(MESSAGE_ADDED, newStartLocation, newEndLocation,
-				distance);
+				     distance);
 	}
 
-	private static void addRouteAtPosition(String newStartLocation,
-			String newEndLocation, String distance, int entryPosition) {
+	private static void addRouteAtPosition(String newStartLocation, String newEndLocation, String distance, 
+					       int entryPosition) {
 		route[entryPosition][STORAGE_POSITION_START_LOCATION] = newStartLocation;
 		route[entryPosition][STORAGE_POSITION_END_LOCATION] = newEndLocation;
 		route[entryPosition][STORAGE_POSITION_DISTANCE] = distance;
@@ -282,8 +282,7 @@ public class CityConnect {
 	 *   newStartLocation and newEndLocation. Returns SLOT_UNAVAILABLE if
 	 *   no suitable slot is found.
 	 */
-	private static int location(String newStartLocation,
-			String newEndLocation) {
+	private static int location(String newStartLocation, String newEndLocation) {
 		
 		for (int i = 0; i < route.length; i++) {
 
@@ -293,7 +292,7 @@ public class CityConnect {
 			if (existingStartLocation == null) { // empty slot
 				return i;
 			} else if (sameRoute(existingStartLocation, existingEndLocation,
-					newStartLocation, newEndLocation)) {
+					     newStartLocation, newEndLocation)) {
 				return i;
 			}
 		}
