@@ -50,6 +50,7 @@ public class CityConnect {
 	private static final String MESSAGE_INVALID_FORMAT = "invalid command format :%1$s";
 	private static final String WELCOME_MESSAGE = "Welcome to SimpleRouteStore!";
 	private static final String MESSAGE_NO_SPACE = "No more space to store locations";
+	private static final int MAX_ROUTES = 10;
 
 	// These are the possible command types
 	enum COMMAND_TYPE {
@@ -72,7 +73,7 @@ public class CityConnect {
 	private static final int PARAM_POSITION_DISTANCE = 2;
 
 	// This array will be used to store the routes
-	private static String[][] route = new String[10][3];
+	private static String[][] route = new String[MAX_ROUTES][3];
 
 	/*
 	 * These are the locations at which various components of the route will be
