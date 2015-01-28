@@ -319,7 +319,7 @@ public class CityConnect {
 	private static boolean isPositiveNonZeroInt(String s) {
 		try {
 			int i = Integer.parseInt(s);
-			//return true if i is greater than 0
+			
 			return (i > 0 ? true : false);
 		} catch (NumberFormatException nfe) {
 			return false;
